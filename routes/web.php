@@ -32,10 +32,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [\App\Http\Controllers\NewProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [\App\Http\Controllers\NewProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [\App\Http\Controllers\NewProfileController::class, 'destroy'])->name('profile.destroy');
-});
+//Route::middleware('auth')->group(function () {
+//    Route::put('/profile', [\App\Http\Controllers\NewProfileController::class, 'update'])->name('profile.put');
+//    Route::get('/profile', [\App\Http\Controllers\NewProfileController::class, 'edit'])->name('profile.edit');
+//    Route::patch('/profile', [\App\Http\Controllers\NewProfileController::class, 'update'])->name('profile.update');
+//    Route::delete('/profile', [\App\Http\Controllers\NewProfileController::class, 'destroy'])->name('profile.destroy');
+//});
 
 require __DIR__.'/auth.php';
